@@ -7,6 +7,7 @@ def train(model, train_dataloader, epochs, optimizer, base_loss_function, aux_lo
     model.train()
 
     for epoch in range(epochs):
+        print(f'{epoch} out of {epochs}')
         for i, data in enumerate(train_dataloader, 0):
             inputs, labels = data
             inputs = inputs.to(device)
